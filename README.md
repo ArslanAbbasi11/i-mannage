@@ -1,16 +1,19 @@
-#Architecture Of (i mannage )  time management app.
+# Architecture Of (i mannage )  time management app.
 
-#1) login
+# 1) login
 -> (admin,user,manager)all have to login first from same  login page.->sucess.
 
-#2)home page
+# 2)home page
 -> home page is passing to pretected route component by props ,which allow to render index of users(admin,manager,user) only when loged in .
 
-#home->protected route:
+# home->protected route:
 -> header and index component of logged in user redering here.
 ->if not loged in then redirect to login page here
 
-#home->admin:
+# home->
+-> alert ,createButton(form which is for creating new users),users(for display users ) .
+->alert is common for all.
+->createButton,users for manager,and admin only
 
 
 
