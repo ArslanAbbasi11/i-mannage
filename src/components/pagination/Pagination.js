@@ -9,6 +9,8 @@ function Pagination() {
     var lastPage=useSelector(state => state.users.all.users?.last_page);
     var token=localStorage.getItem('token');
   const dispatch = useDispatch();
+
+  //Custom pagination by arslan ahmed abbasi
     return (
       <>  { links ? 
         <div className={style.wrapper}>
@@ -16,6 +18,9 @@ function Pagination() {
              onClick={()=>dispatch(allActions.fetchData("USERS",token,currentPage-1))}
             >&laquo; Previous</button> : <></>}
 
+          {lastPage>3 ?  <button className={style.move_btn}
+             onClick={()=>dispatch(allActions.fetchData("USERS",token,1))}
+            >&laquo; 1st page</button> : <></>}
             <button  className={style.current} >{currentPage}</button>
 
            {lastPage>1 ?<button className={style.pg_btn} 
@@ -28,7 +33,11 @@ function Pagination() {
 
          {lastPage>3 ? <span className={style.dots}> ...</span> : <></>}
 
-           {lastPage>3 ? <button className={style.pg_btn}>{lastPage}</button> : <></>}
+           {lastPage>3 ? <button className={style.pg_btn}
+          onClick={()=>dispatch(allActions.fetchData("USERS",token,lastPage))}
+           >
+               {lastPage}</button> : <></>}
+
            {lastPage>3 ?     <button className={style.move_btn}
             onClick={()=>dispatch(allActions.fetchData("USERS",token,currentPage+1))}
            >Next &raquo;</button> : <></>}

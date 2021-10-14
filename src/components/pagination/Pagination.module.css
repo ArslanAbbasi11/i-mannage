@@ -14,7 +14,7 @@
     transform: scale(1.1);
 }
 .wrapper{
-    width: 38%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
