@@ -14,7 +14,8 @@
 -> alert ,createButton(form which is for creating new users),users(for display users ) .
 ->alert is common for all.
 ->createButton,users for manager,and admin only
-
+# pagination 
+-> custom pagination(by me) .for admin and manager only 
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
